@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+.bootstrap-table .table{
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #fff;
+    border-collapse: collapse !important;
+    border-radius: 1px;
+}
+.portlet.box.grey-cascade{
+	border-top: 1px solid #b1bdbd!important;
+}
+.portlet.box.grey-cascade > .portlet-title{
+	background: #f5f5f5;
+}
+.portlet.box.grey-cascade > .portlet-title > .caption{
+	color: #333333;
+}
+.portlet.box.grey-cascade > .portlet-title > .caption > i{
+	color: #333333;
+}
+.table thead tr th{
+	font-weight: 400;
+	color: #333;
+}
+.glyphicon{
+	font-weight: 100;
+	color: #777;
+}

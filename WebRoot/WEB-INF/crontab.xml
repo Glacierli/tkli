@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<crontab>
+<!--定时任务配置  -->
+  <crontabentry id="1">
+    <seconds>0</seconds>
+    <minutes>0</minutes>
+    <hours>0</hours>
+    <daysofmonth>*</daysofmonth>
+    <months>*</months>
+    <daysofweek>*</daysofweek>
+    <years>*</years>
+    <bussinesdays>true</bussinesdays>
+    <startDate></startDate>
+    <endDate></endDate>
+    <class>com.bcli.backend.timer.StatusTest</class>
+    <method>main</method>
+     <parameters></parameters>
+    <description></description>
+  </crontabentry>
+</crontab>

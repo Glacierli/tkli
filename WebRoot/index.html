@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>太古里</title>
+</head>
+<style>
+    body,
+    html {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-color: #6666ff;
+    }
+    
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        margin: 0;
+    }
+    
+    .content {
+        width: 100vw;
+        height: 100vh;
+        background-image: url('img/beijing.png');
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        box-sizing: border-box;
+    }
+    
+    .content_center,
+    .content_top {
+        width: 96%;
+        margin: 0 2%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .content_top_center {
+        text-align: center;
+        position: relative;
+    }
+    
+    .content_top_center_title {
+        width: 100%;
+        position: absolute;
+        top: 0.8rem;
+        font-size: 1.8rem;
+        z-index: 999;
+    }
+    
+    .content_top_item:nth-child(1) {
+        width: 20%;
+        text-align: left;
+    }
+    
+    .content_top_item:nth-child(1) img {
+        width: 24%
+    }
+    
+    .content_top_item:nth-child(2) {
+        width: 55%;
+        margin-top: -0.5rem;
+    }
+    
+    .content_top_item:nth-child(2) img {
+        width: 90%
+    }
+    
+    .content_top_item:nth-child(3) {
+        width: 25%;
+        text-align: right;
+    }
+    
+    .content_top_item:nth-child(3) img {
+        width: 50%
+    }
+    
+    .content_top_item:nth-child(3) p {
+        font-size: 1rem;
+    }
+    
+    .content_center_left,
+    .content_center_right {
+        width: 40%;
+    }
+    
+    .content_center_left_top {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .content_center_left_top_item:nth-child(1) {
+        margin-right: 0.1rem;
+    }
+    
+    .content_center_left_top_item {
+        width: calc(50% - 0.05rem);
+        background-color: #99ccff;
+        padding: 0.4rem 0 0.2rem;
+    }
+    
+    .title1 {
+        color: #000;
+        font-size: 0.8rem;
+    }
+    
+    .title2 {
+        color: #cc0000;
+        font-size: 0.8rem;
+        margin: 0.2rem 0 0.1rem;
+    }
+    
+    .title3 {
+        color: #cc0000;
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+    
+    .title4 {
+        color: #009933;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 0.3rem
+    }
+    
+    .title5 {
+        color: #ff6600;
+        font-weight: bold;
+        font-size: 0.8rem;
+        margin-top: 0.3rem
+    }
+    
+    .title6 {
+        color: #ccff00;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 0.3rem
+    }
+    
+    .title7 {
+        color: #c00000;
+        font-weight: bold;
+        font-size: 1.1rem;
+        padding-bottom: 0.2rem;
+    }
+    
+    .content_center_left_bottom_item {
+        width: 100%;
+        background-color: #99ccff;
+        padding: 0.6rem 0 0.4rem;
+        text-align: center;
+        margin-top: 0.1rem;
+    }
+    
+    .videoBox {
+        width: 100%;
+        height: 8rem;
+        border: 0.02rem solid red;
+    }
+    
+    .content_center_right_bottom {
+        width: 100%;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .content_center_right_bottom_left {
+        width: calc(100% - 7.75rem);
+        margin-right: 0.1rem;
+        padding: 0 0.1rem 1rem 0;
+        background-color: #99ccff;
+        box-sizing: border-box;
+    }
+    
+    .content_center_right_bottom_left h5 {
+        color: red;
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+    
+    .content_center_right_bottom_leftItem {
+        font-size: 0.8rem
+    }
+    
+    .content_center_right_bottom_leftItem img {
+        height: 0.8rem;
+        margin: -0.03rem 0.3rem;
+    }
+    
+    .content_center_right_bottom_right {
+        width: 7.65rem;
+        display: inline-flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .content_center_right_bottom_rightItem:nth-child(1),
+    .content_center_right_bottom_rightItem:nth-child(3),
+    .content_center_right_bottom_rightItem:nth-child(5) {
+        margin: 0 0.05rem 0.05rem 0;
+    }
+    
+    .content_center_right_bottom_rightItem:nth-child(2),
+    .content_center_right_bottom_rightItem:nth-child(4),
+    .content_center_right_bottom_rightItem:nth-child(6) {
+        margin: 0 0 0.05rem 0;
+    }
+    
+    .content_center_right_bottom_rightItem {
+        width: 3.8rem;
+        height: 3.8rem;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="content">
+        <div class="content_top">
+            <div class="content_top_item"><img src="img/logo.png" alt=""></div>
+            <div class="content_top_item content_top_center">
+                <img src="img/dingbu.png" alt="">
+                <h5 class="content_top_center_title">EHS信息交流园地</h5>
+            </div>
+            <div class="content_top_item">
+                <img src="img/logo2.png" alt="">
+                <p>2019年10月26日&nbsp; 星期六</p>
+            </div>
+        </div>
+        <div class="content_center">
+            <div class="content_center_left">
+                <div class="content_center_left_top">
+                    <div class="content_center_left_top_item">
+                        <p class="title1">公司事故损失工时</p>
+                        <p class="title2">2019</p>
+                        <p class="title3">001</p>
+                    </div>
+                    <div class="content_center_left_top_item">
+                        <p class="title1">承包商重大事故</p>
+                        <p class="title2">2019</p>
+                        <p class="title3">002</p>
+                    </div>
+                </div>
+
+                <div class="content_center_left_bottom">
+                    <div class="content_center_left_bottom_item">
+                        <p class="title1">当前安全记录（无损失工时事故）天数</p>
+                        <p class="title4">116</p>
+                    </div>
+                    <div class="content_center_left_bottom_item">
+                        <p class="title1">本公司无损失工时事故最高安全记录</p>
+                        <p class="title5">986</p>
+                    </div>
+                    <div class="content_center_left_bottom_item">
+                        <p class="title1">最近一次损失工时事故发生日期</p>
+                        <p class="title6">2019年02月02日</p>
+                    </div>
+                    <div class="content_center_left_bottom_item">
+                        <h5 class="title7">零事故零伤害！为自己为家人！</h5>
+                    </div>
+                </div>
+
+            </div>
+            <div class="content_center_right">
+                <div class="content_center_right_top">
+                    <video class="videoBox" controls="controls" autoplay="autoplay">
+                                <source src="video.mp4" type="video/mp4" >
+                              </video>
+                </div>
+                <div class="content_center_right_bottom">
+                    <div class="content_center_right_bottom_left">
+                        <div class="content_center_right_bottom_left1">
+                            <h5>安全作业指引</h5>
+                            <div class="content_center_right_bottom_leftItem"><img src="img/pdf.png" alt="">常规擦窗机操作安全指引常规擦窗机操作安全指引常规擦窗机操作安全指引</div>
+                            <div class="content_center_right_bottom_leftItem"><img src="img/pdf.png" alt="">常规擦窗机操作安全指引常规擦窗机操作安全指引常规擦窗机操作安全指引</div>
+                            <div class="content_center_right_bottom_leftItem"><img src="img/pdf.png" alt="">常规擦窗机操作安全指引常规擦窗机操作安全指引常规擦窗机操作安全指引</div>
+                            <div class="content_center_right_bottom_leftItem"><img src="img/pdf.png" alt="">常规擦窗机操作安全指引常规擦窗机操作安全指引常规擦窗机操作安全指引</div>
+                        </div>
+                        <div class="content_center_right_bottom_left2"></div>
+                    </div>
+                    <div class="content_center_right_bottom_right">
+                        <img class="content_center_right_bottom_rightItem" src="img/ren1.png" alt="">
+                        <img class="content_center_right_bottom_rightItem" src="img/ren2.png" alt="">
+                        <img class="content_center_right_bottom_rightItem" src="img/ren3.png" alt="">
+                        <img class="content_center_right_bottom_rightItem" src="img/ren4.png" alt="">
+                        <img class="content_center_right_bottom_rightItem" src="img/ren5.png" alt="">
+                        <img class="content_center_right_bottom_rightItem" src="img/ren6.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var self = this;
+    window.onload = function() {
+        self.getRem(5839, 100);
+    };
+    self.getRem(5839, 100);
+    window.onresize = function() {
+        self.getRem(5839, 100);
+    };
+    // 设计rem节点大小，等比例换算
+    function getRem(pwidth, prem) {
+        var html = document.documentElement;
+        var oWidth = window.outerWidth ? window.outerWidth : screen.width;
+        html.style.fontSize = (oWidth / pwidth) * prem + "px";
+    }
+</script>
+
+</html>
